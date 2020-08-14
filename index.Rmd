@@ -1,0 +1,36 @@
+---
+title: "News Bits"
+author: "A New Approach to Numbers Journalism"
+date: "`r Sys.Date()`"
+output:
+  prettydoc::html_pretty:
+    theme: leonids
+    highlight: github
+---
+
+## About News Bits
+
+[**News Bits**](./index.html) is currently a random website without even a real url that currently adds no value to anything. Here's the [Github repo](https://github.com/mathslug/data_journal)
+
+## Latest Articles
+
+Currently most of these are just random links to my blog as placeholders
+
+* [Sample Article](./sample.html)
+* [Rando Web Scraping Thing](https://mathslug.github.io/2018/10/31/scraping.html)
+* [Synesthesia](https://mathslug.github.io/2018/07/02/autoLight.html)
+* [GarliBot](https://mathslug.github.io/2018/03/16/garliBot.html)
+
+## Trusty Tools^[Thanks to https://prettydoc.statr.me for this whole template. We will probably need to ditch it before going public bc I don't see a license.]
+
+Here's a [webapp](https://mathslug.shinyapps.io/exoplanetShiny/) to visualize exoplanet data that we could embed in an article. Here's another [shiny app](https://mathslug.shinyapps.io/InterventionSignificanceTest2/).
+
+Here's some random data.
+```{r fig.width=6, fig.height=6, fig.align='center', echo=FALSE}
+set.seed(123)
+n <- 1000
+x1  <- matrix(rnorm(n), ncol = 2)
+x2  <- matrix(rnorm(n, mean = 3, sd = 1.5), ncol = 2)
+x   <- rbind(x1, x2)
+smoothScatter(x, xlab = "x1", ylab = "x2")
+```
